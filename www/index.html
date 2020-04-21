@@ -37,6 +37,34 @@ admob.banner.show({
 	id: 'ca-app-pub-6871330764548204/6787711262',
 	autoShow:true
 })
+function initAds() {
+          if (admob) {
+            var adPublisherIds = {
+           
+              android : {
+                banner : "ca-app-pub-6871330764548204/6787711262"
+                
+              }
+            };
+
+            var admobid = (/(android)/i.test(navigator.userAgent)) ? adPublisherIds.android : adPublisherIds.ios;
+
+            admob.setOptions({
+              publisherId: admobid.banner,
+              
+            });
+
+            registerAdEvents();
+
+          } else {
+            alert('AdMobAds plugin not ready');
+          }
+        }
+
+  initAds();
+
+  // display a banner at startup
+  admob.createBannerView();
 	try {
 		
 		navigator.splashscreen.hide();	
