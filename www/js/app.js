@@ -213,34 +213,7 @@ ons.ready(function() {
 /*END ONSEN*/
 
 /*CORDOVA DEVICE READY*/
-document.addEventListener("deviceready", onDeviceReady, false);
 
-function onDeviceReady(){
-	
-	// Create banner
-admob.banner.prepare()
-
-// Show the banner
-admob.banner.show({
-	id: 'ca-app-pub-6871330764548204/6787711262',
-	autoShow:true
-})
-	try {
-		
-		navigator.splashscreen.hide();	
-		device_uiid = device.uuid;
-		device_platform = device.platform;		
-		
-		if(device.platform=="android" || device.platform=="Android" ){
-		   StatusBar.backgroundColorByHexString("#ef6625");
-		}
-		
-		initPush(false);
-				
-	} catch(err) {
-       alert(err.message);
-    } 
-};
 /*END CORDOVA DEVICE READY*/
 
 document.addEventListener("offline", function(){
