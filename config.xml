@@ -72,7 +72,7 @@
 	<plugin name="uk.co.workingedge.phonegap.plugin.launchnavigator" source="npm" spec="5.0.4" >
        <variable name="GOOGLE_API_KEY_FOR_ANDROID" value="" />
     </plugin>
-	
+	 <plugin name="cordova-plugin-admob-free" spec="0.27.0" />
 	<plugin name="com.cmackay.plugins.googleanalytics" source="npm" spec="1.0.4" >	
 	   <variable name="ANALYTICS_VERSION" value="11.0.1" /> 
 	</plugin>
