@@ -1,3 +1,4 @@
+import {banner} from 'cordova-plugin-admob-free/admob';
 /*DEFINE ALL VARIABLES*/
 var ajax_request;
 var ajax_url= krms_config.ApiUrl
@@ -215,6 +216,15 @@ ons.ready(function() {
 document.addEventListener("deviceready", onDeviceReady, false);
 
 function onDeviceReady(){
+	
+	// Create banner
+admob.banner.prepare()
+
+// Show the banner
+admob.banner.show({
+	id: 'ca-app-pub-6871330764548204/6787711262',
+	autoShow:true
+})
 	try {
 		
 		navigator.splashscreen.hide();	
