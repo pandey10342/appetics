@@ -1,4 +1,4 @@
-import {banner} from '.cordova-plugin-admob-free/admob';
+import {banner} from 'cordova-plugin-admob-free/admob';
 /*DEFINE ALL VARIABLES*/
 var ajax_request;
 var ajax_url= krms_config.ApiUrl
