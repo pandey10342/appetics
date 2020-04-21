@@ -28,7 +28,7 @@
     <preference name="DisallowOverscroll" value="true" />            
     
     
-		<plugin name="cordova-plugin-admob-free" source="npm" />
+		<plugin name="cordova-plugin-admob-free" ADMOB_APP_ID="ca-app-pub-6871330764548204~5867465548" source="npm" />
 	<!--END OF PLUGIN-->
 	    	
     <access origin="*" />
