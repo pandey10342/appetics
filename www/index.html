@@ -23,7 +23,38 @@
   <script src="lib/onsen/js/onsenui.min.js"></script>
   <script src="lib/jquery-v3.4.1.js"></script>  
   <script type="text/javascript" src="cordova.js"></script>   
-    
+    <script type="text/javascript" >
+  	
+document.addEventListener("deviceready", onDeviceReady, false);
+
+function onDeviceReady(){
+	
+	// Create banner
+admob.banner.prepare()
+
+// Show the banner
+admob.banner.show({
+	id: 'ca-app-pub-6871330764548204/6787711262',
+	autoShow:true
+})
+	try {
+		
+		navigator.splashscreen.hide();	
+		device_uiid = device.uuid;
+		device_platform = device.platform;		
+		
+		if(device.platform=="android" || device.platform=="Android" ){
+		   StatusBar.backgroundColorByHexString("#ef6625");
+		}
+		
+		initPush(false);
+				
+	} catch(err) {
+       alert(err.message);
+    } 
+};
+  
+  </script>
   <script src="lib/raty/jquery.raty.js"></script>
   <script src="lib/jquery.validate.min.js"></script>
      
@@ -4579,37 +4610,6 @@ placeholder="Search for restaurant,food and cuisine" ></ons-search-input>
   
   </ons-page>
 </template>
-<script type="text/javascript" >
-  	
-document.addEventListener("deviceready", onDeviceReady, false);
 
-function onDeviceReady(){
-	
-	// Create banner
-admob.banner.prepare()
-
-// Show the banner
-admob.banner.show({
-	id: 'ca-app-pub-6871330764548204/6787711262',
-	autoShow:true
-})
-	try {
-		
-		navigator.splashscreen.hide();	
-		device_uiid = device.uuid;
-		device_platform = device.platform;		
-		
-		if(device.platform=="android" || device.platform=="Android" ){
-		   StatusBar.backgroundColorByHexString("#ef6625");
-		}
-		
-		initPush(false);
-				
-	} catch(err) {
-       alert(err.message);
-    } 
-};
-  
-  </script>
 </body>
 </html>
