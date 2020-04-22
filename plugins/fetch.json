@@ -16,5 +16,13 @@
     "variables": {
       "ADMOB_APP_ID": "ca-app-pub-6871330764548204~5867465548"
     }
+  },
+  "cordova-admob-sdk": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-admob-sdk@~0.24.1"
+    },
+    "is_top_level": false,
+    "variables": {}
   }
 }

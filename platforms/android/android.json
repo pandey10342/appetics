@@ -1,0 +1,182 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {
+      "*-Info.plist": {
+        "parents": {
+          "NSCameraUsageDescription": [
+            {
+              "xml": "<string>Enable Karenderia to access your camera to take photos of you and to save as profile picture.</string>",
+              "count": 1,
+              "mode": "merge",
+              "id": "config.xml"
+            }
+          ],
+          "NSPhotoLibraryUsageDescription": [
+            {
+              "xml": "<string>Enable Karenderia to access your photo library to get pictures from there.</string>",
+              "count": 1,
+              "mode": "merge",
+              "id": "config.xml"
+            }
+          ],
+          "NSLocationWhenInUseUsageDescription": [
+            {
+              "xml": "<string>This allows us to use your location to find restaurant nearby.</string>",
+              "count": 1,
+              "mode": "merge",
+              "id": "config.xml"
+            }
+          ],
+          "NSLocationAlwaysAndWhenInUseUsageDescription": [
+            {
+              "xml": "<string>This allows us to use your location to provide you a nearby restaurant, and to facilitate more accurately, keeping you in the loop about Karenderia.</string>",
+              "count": 1,
+              "mode": "merge",
+              "id": "config.xml"
+            }
+          ],
+          "NSLocationAlwaysUsageDescription": [
+            {
+              "xml": "<string>This allows us to use your location to find restaurant nearby.</string>",
+              "count": 1,
+              "mode": "merge",
+              "id": "config.xml"
+            }
+          ],
+          "NSPhotoLibraryAddUsageDescription": [
+            {
+              "xml": "<string>Enable Karenderia to access your photo library to save pictures there.</string>",
+              "count": 1,
+              "mode": "merge",
+              "id": "config.xml"
+            }
+          ],
+          "NSMicrophoneUsageDescription": [
+            {
+              "xml": "<string>need microphone access to record sounds</string>",
+              "count": 1,
+              "mode": "merge",
+              "id": "config.xml"
+            }
+          ],
+          "NSBluetoothAlwaysUsageDescription": [
+            {
+              "xml": "<string>Improve location accuracy when finding nearby restaurant</string>",
+              "count": 1,
+              "mode": "merge",
+              "id": "config.xml"
+            }
+          ],
+          "NSBluetoothPeripheralUsageDescription": [
+            {
+              "xml": "<string>Improve location accuracy when finding nearby restaurant</string>",
+              "count": 1,
+              "mode": "merge",
+              "id": "config.xml"
+            }
+          ]
+        }
+      },
+      "app/src/main/AndroidManifest.xml": {
+        "parents": {
+          "/manifest/application": [
+            {
+              "xml": "<application android:usesCleartextTraffic=\"true\" />",
+              "count": 1,
+              "mode": "merge",
+              "id": "config.xml",
+              "oldAttrib": {
+                "android:hardwareAccelerated": "true",
+                "android:icon": "@mipmap/ic_launcher",
+                "android:label": "@string/app_name",
+                "android:supportsRtl": "true",
+                "android:usesCleartextTraffic": "true"
+              }
+            }
+          ]
+        }
+      },
+      "AndroidManifest.xml": {
+        "parents": {
+          "/manifest/application": [
+            {
+              "xml": "<activity android:configChanges=\"keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize\" android:name=\"com.google.android.gms.ads.AdActivity\" android:theme=\"@android:style/Theme.Translucent\" />",
+              "count": 1
+            },
+            {
+              "xml": "<meta-data android:name=\"com.google.android.gms.ads.APPLICATION_ID\" android:value=\"ca-app-pub-6871330764548204~5867465548\" />",
+              "count": 1
+            }
+          ],
+          "/*": [
+            {
+              "xml": "<uses-permission android:name=\"android.permission.INTERNET\" />",
+              "count": 1
+            },
+            {
+              "xml": "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\" />",
+              "count": 1
+            }
+          ]
+        }
+      },
+      "res/xml/config.xml": {
+        "parents": {
+          "/*": [
+            {
+              "xml": "<feature name=\"AdMob\"><param name=\"android-package\" value=\"name.ratson.cordova.admob.AdMob\" /><param name=\"onload\" value=\"true\" /></feature>",
+              "count": 1
+            }
+          ]
+        }
+      }
+    }
+  },
+  "installed_plugins": {
+    "cordova-promise-polyfill": {
+      "PACKAGE_NAME": "com.appetics.online"
+    },
+    "cordova-admob-sdk": {
+      "PLAY_SERVICES_VERSION": "11.0.4",
+      "PACKAGE_NAME": "com.appetics.online"
+    },
+    "cordova-plugin-admob-free": {
+      "ADMOB_APP_ID": "ca-app-pub-6871330764548204~5867465548",
+      "PLAY_SERVICES_VERSION": "11.0.4",
+      "PACKAGE_NAME": "com.appetics.online"
+    }
+  },
+  "dependent_plugins": {},
+  "modules": [
+    {
+      "id": "cordova-promise-polyfill.Promise",
+      "file": "plugins/cordova-promise-polyfill/www/Promise.js",
+      "pluginId": "cordova-promise-polyfill",
+      "runs": true
+    },
+    {
+      "id": "cordova-promise-polyfill.promise.min",
+      "file": "plugins/cordova-promise-polyfill/www/promise.min.js",
+      "pluginId": "cordova-promise-polyfill"
+    },
+    {
+      "id": "cordova-plugin-admob-free.AdMob",
+      "file": "plugins/cordova-plugin-admob-free/www/admob.js",
+      "pluginId": "cordova-plugin-admob-free",
+      "clobbers": [
+        "admob",
+        "AdMob",
+        "plugins.AdMob"
+      ]
+    }
+  ],
+  "plugin_metadata": {
+    "cordova-promise-polyfill": "0.0.2",
+    "cordova-admob-sdk": "0.24.1",
+    "cordova-plugin-admob-free": "0.27.0"
+  }
+}
