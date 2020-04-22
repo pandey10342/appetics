@@ -14,5 +14,15 @@
     },
     "is_top_level": false,
     "variables": {}
+  },
+  "cordova-plugin-admob-free": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-admob-free"
+    },
+    "is_top_level": true,
+    "variables": {
+      "ADMOB_APP_ID": "ca-app-pub-6871330764548204~5867465548"
+    }
   }
 }

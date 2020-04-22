@@ -1,0 +1,24 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "cordova-plugin-admob-free": {
+      "ADMOB_APP_ID": "ca-app-pub-6871330764548204~5867465548",
+      "PACKAGE_NAME": "com.appetics.online"
+    }
+  },
+  "dependent_plugins": {
+    "cordova-admob-sdk": {
+      "PLAY_SERVICES_VERSION": "11.0.4",
+      "PACKAGE_NAME": "com.appetics.online"
+    },
+    "cordova-promise-polyfill": {
+      "PACKAGE_NAME": "com.appetics.online"
+    }
+  }
+}

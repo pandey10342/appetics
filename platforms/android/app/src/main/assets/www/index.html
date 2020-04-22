@@ -24,57 +24,20 @@
   <script src="lib/jquery-v3.4.1.js"></script>  
   <script type="text/javascript" src="cordova.js"></script>   
     <script type="text/javascript" >
-  	document.addEventListener('deviceready', this.onDeviceReady, false);
-var app = {
+  	
+document.addEventListener("deviceready", onDeviceReady, false);
 
-initAds: function () {
-        var isAndroid = (/(android)/i.test(navigator.userAgent));
-        var adPublisherIds = {
-            ios: {
-                banner: 'ca-app-pub-9863325511078756/5232547029',
-                //interstitial: 'ca-app-pub-9863325511078756/6709280228'
-            },
-            android: {
-                banner: 'ca-app-pub-6871330764548204/6787711262',
-               // interstitial: 'ca-app-pub-9863325511078756/2279080628'
-            }
-        };
-        var admobid;
+function onDeviceReady(){
+	
+	// Create banner
+admob.banner.prepare()
 
-        if (isAndroid) {
-            admobid = adPublisherIds.android;
-        } else {
-            admobid = adPublisherIds.ios;
-        }
-        if (window.admob) {
-            admob.setOptions({
-                publisherId: admobid.banner,
-               // interstitialAdId: admobid.interstitial,
-                bannerAtTop: true, // set to true, to put banner at top
-                overlap: false, // set to true, to allow banner overlap webview
-                offsetStatusBar: true, // set to true to avoid ios7 status bar overlap
-                isTesting: true, // receiving test ads (do not test with real ads as your account will be banned)
-                autoShowBanner: true, // auto show banners ad when loaded
-               // autoShowInterstitial: false // auto show interstitials ad when loaded
-            });
-        } else {
-            alert('cordova-admob plugin not ready.\nAre you in a desktop browser? It won\'t work...');
-        }
-    },
-	onDeviceReady: function () {
-      
-        document.removeEventListener('deviceready', app.onDeviceReady, false);
-
-     
-
-        if (window.admob) {
-            console.log('Initializing ads...');
-            app.initAds();
-        } else {
-            alert('cordova-admob plugin not ready.\nAre you in a desktop browser? It won\'t work...');
-        }
-		
-		try {
+// Show the banner
+admob.banner.show({
+	id: 'ca-app-pub-6871330764548204/6787711262',
+	autoShow:true
+})
+	try {
 		
 		navigator.splashscreen.hide();	
 		device_uiid = device.uuid;
@@ -89,21 +52,7 @@ initAds: function () {
 	} catch(err) {
        alert(err.message);
     } 
-    },
- showBannerAds: function () {
-        if (window.admob) {
-            window.admob.showBannerAd(true, function () { }, function (e) {
-                alert(JSON.stringify(e));
-            });
-        } else {
-            alert('cordova-admob plugin not ready.\nAre you in a desktop browser? It won\'t work...');
-        }
-    }
-
-
 };
-
-
   
   </script>
   <script src="lib/raty/jquery.raty.js"></script>

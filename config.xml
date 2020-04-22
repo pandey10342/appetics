@@ -17,7 +17,6 @@
     <preference name="android-minSdkVersion" value="19" />
     <preference name="android-targetSdkVersion" value="28" />
     <preference name="DisallowOverscroll" value="true" />
-	 <gap:plugin name="phonegap-admob" source="npm" spec="5.1.0" />
     <gap:plugin name="cordova-plugin-whitelist" source="npm" />
     <gap:plugin name="cordova-plugin-device" source="npm" />
     <gap:plugin name="cordova-plugin-inappbrowser" source="npm" />
