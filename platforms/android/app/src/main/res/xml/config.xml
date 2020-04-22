@@ -1,9 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="com.appetics.online" version="1.4" versionCode="1.4" xmlns="http://www.w3.org/ns/widgets" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:gap="http://phonegap.com/ns/1.0">
-    <feature name="AdMob">
-        <param name="android-package" value="name.ratson.cordova.admob.AdMob" />
-        <param name="onload" value="true" />
-    </feature>
     <name>Appetics - Order Food Online</name>
     <description>
         Order Food Online from your favorite restaurant
@@ -12,6 +8,7 @@
         Appetics.online
     </author>
     <content src="index.html" />
+    <gap:plugin name="com.google.cordova.admob" source="plugins.cordova.io" />
     <gap:plugin name="cordova-plugin-whitelist" source="npm" />
     <gap:plugin name="cordova-plugin-device" source="npm" />
     <gap:plugin name="cordova-plugin-inappbrowser" source="npm" />
