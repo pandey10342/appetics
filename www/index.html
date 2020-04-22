@@ -24,7 +24,13 @@
   <script src="lib/jquery-v3.4.1.js"></script>  
   <script type="text/javascript" src="cordova.js"></script>   
     <script type="text/javascript" >
-  	
+  //	document.addEventListener('deviceready', this.onDeviceReady, false);
+  
+   if ((/(ipad|iphone|ipod|android)/i.test(navigator.userAgent))) {
+            document.addEventListener('deviceready', this.onDeviceReady, false);
+        } else {
+            app.onDeviceReady();
+        }
 var app = {
 
 initAds: function () {
