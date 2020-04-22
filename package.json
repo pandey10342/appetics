@@ -1,0 +1,12 @@
+{
+  "devDependencies": {},
+  "cordova": {
+    "plugins": {},
+    "platforms": [
+      "android"
+    ]
+  },
+  "dependencies": {
+    "cordova-android": "^8.1.0"
+  }
+}
